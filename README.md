@@ -1,3 +1,7 @@
 # Hey people
 
-[logo]: https://github.com/jsperov/UI-Kit/react-logo.png
+![GitHub Logo](./react-logo.png)
+
+### Author
+
+[@Andrey_Perov](https://github.com/jsperov)
