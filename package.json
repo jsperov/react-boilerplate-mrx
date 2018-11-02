@@ -1,0 +1,19 @@
+{
+  "name": "ui-kit",
+  "version": "0.0.0",
+  "description": "my ui components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsperov/UI-Kit.git"
+  },
+  "author": "Andrey Perov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsperov/UI-Kit/issues"
+  },
+  "homepage": "https://github.com/jsperov/UI-Kit#readme"
+}
