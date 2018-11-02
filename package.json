@@ -4,7 +4,8 @@
   "description": "my ui components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server webpack-config-dev.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/jsperov/UI-Kit/issues"
   },
-  "homepage": "https://github.com/jsperov/UI-Kit#readme"
+  "homepage": "https://github.com/jsperov/UI-Kit#readme",
+  "devDependencies": {
+    "webpack": "^4.24.0"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
 }
