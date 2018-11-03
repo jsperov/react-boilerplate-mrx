@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server webpack-config-dev.js",
+    "start": "node_modules/.bin/webpack webpack.config.js",
     "bundle": "webpack"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "@webpack-cli/init": "^0.1.2",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "eslint": "^5.8.0",
