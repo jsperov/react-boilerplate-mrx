@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Star } from './star'
-import './star.css';
+import './star.scss';
 
 class StarRating extends React.Component {
   static defaultProps = {

@@ -1,12 +1,11 @@
-const { resolve } = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { resolve } = require('path');
 
-
-const SRC = resolve(__dirname, 'ui-kit')
-const EXAMPLE = resolve(__dirname, 'example')
+const SRC = resolve(__dirname, 'ui-kit');
+const EXAMPLE = resolve(__dirname, 'example');
 
 module.exports = {
-  entry: './ui-kit/index.js',
+  mode: 'development',
+  entry: './ui-kit',
   output: {
     filename: 'bundle.js',
     path: EXAMPLE
@@ -16,13 +15,28 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+              presets: ['@babel/preset-env'],
+          }
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+        ]
       }
     ]
   },
-  plugin: [
-    new CleanWebpackPlugin(['example'])
-  ],
+  plugins: [],
   watch: true,
-  devtool: 'source-map'
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: EXAMPLE,
+    clientLogLevel: 'error'
+  }
 };
