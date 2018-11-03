@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/webpack webpack.config.js",
+    "start": "webpack webpack.config.js",
     "bundle": "webpack"
   },
   "repository": {
