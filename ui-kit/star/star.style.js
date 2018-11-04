@@ -1,9 +1,12 @@
-.star {
+import styled from 'styled-components';
+
+const StarBox = styled.div`
+  .star {
   display: inline-block;
   margin: 0 7px;
   width: 25px;
   min-height: 25px;
-  background: #e7eb078a;
+  background: ${props => props.color};
   -webkit-clip-path: polygon(
     0% 50%,
     35% 35%,
@@ -18,5 +21,8 @@
 }
 
 .star.active {
-  background: #e7eb07;
+  background: ${props => props.activeColor}};
 }
+`
+
+export { StarBox }

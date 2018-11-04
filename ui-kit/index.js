@@ -1,3 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import { StarRating } from './star/index.jsx'
 
-alert('328')
+ReactDOM.render(
+  <StarRating />,
+  document.getElementById('react-ui-kit'),
+);
+

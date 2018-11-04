@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Star } from './star'
-import './star.scss';
+import { Star } from './star';
+import { StarBox } from './star.style';
 
 class StarRating extends React.Component {
   static defaultProps = {
     repeat: 5,
-    color: '#e7eb078a',
+    color: '#f9f',
     activeColor: '#e7eb07',
     activeStar: 0
   }
@@ -28,14 +28,17 @@ class StarRating extends React.Component {
   );
 
   render() {
-    const { repeat } = this.props;
+    const { repeat, color, activeColor } = this.props;
     const { rating } = this.state;
 
     return (
-      <React.Fragment>
+      <StarBox
+        color={color}
+        activeColor={activeColor}
+      >
         Звезды {`${rating} из  ${repeat}`}
         {this.renderStar(repeat)}
-      </React.Fragment>
+      </StarBox>
     )
   }
 }

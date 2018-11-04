@@ -37,6 +37,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: EXAMPLE,
-    clientLogLevel: 'error'
+    clientLogLevel: 'error',
+    stats: 'minimal'
   }
 };
