@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 const SRC = resolve(__dirname, 'ui-kit');
 const EXAMPLE = resolve(__dirname, 'example');
@@ -10,6 +11,9 @@ module.exports = {
     filename: 'bundle.js',
     path: EXAMPLE
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
   module: {
     rules : [
       {
@@ -18,21 +22,24 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-              presets: ['@babel/preset-env'],
+              presets: [
+                '@babel/preset-env'
+              ]
           }
         }
       },
       {
-        test: /\.scss$/,
-        use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
-        ]
+        test: '/\.tsx?$/',
+        loader: 'awesome-typescript-loader'
       }
     ]
   },
-  plugins: [],
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ]
+  },
+  plugins: [
+    new CheckerPlugin()
+  ],
   watch: true,
   devtool: 'inline-source-map',
   devServer: {

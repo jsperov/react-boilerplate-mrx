@@ -1,9 +1,21 @@
-import React from 'react';
+import * as React from 'react';
+
 
 import { Star } from './star';
 import { StarBox } from './star.style';
 
-class StarRating extends React.Component {
+type IProps = {
+  repeat: any,
+  color: any,
+  activeColor: any,
+  activeStar: any
+}
+
+type State = {
+  rating: any
+};
+
+class StarRating extends React.Component<IProps, State> {
   static defaultProps = {
     repeat: 5,
     color: '#f9f',
@@ -15,9 +27,9 @@ class StarRating extends React.Component {
     rating: 0
   };
 
-  onClick = rating => this.setState({ rating })
+  onClick = (rating: any) : void => this.setState({ rating })
 
-  renderStar = (repeat) => [...Array(repeat)].map((item, rate) => 
+  renderStar = (repeat: any) => [...Array(repeat)].map((item, rate) => 
     <Star
       rate={rate}
       selected={this.state.rating > rate}

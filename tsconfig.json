@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./example/",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowJs": true
+  },
+  "exclude": [
+    "node_modules"
+]
+}
