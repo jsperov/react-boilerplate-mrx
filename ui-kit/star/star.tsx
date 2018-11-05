@@ -1,7 +1,13 @@
 import * as React from 'react';
 
-const Star = ({
-  rate,
+type Props = {
+  selected: boolean,
+  color: string,
+  activeColor: string
+  onClick?: () => void,
+}
+
+const Star: React.SFC<Props> = ({
   selected,
   ...rest
 }) => 

@@ -31,7 +31,6 @@ class StarRating extends React.Component<IProps, State> {
 
   renderStar = (repeat: any) => [...Array(repeat)].map((item, rate) => 
     <Star
-      rate={rate}
       selected={this.state.rating > rate}
       onClick={() => this.onClick(rate + 1)}
       color={this.props.color}

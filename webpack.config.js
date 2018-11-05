@@ -1,5 +1,4 @@
 const { resolve } = require('path');
-const { CheckerPlugin } = require('awesome-typescript-loader')
 
 const SRC = resolve(__dirname, 'ui-kit');
 const EXAMPLE = resolve(__dirname, 'example');
@@ -12,12 +11,16 @@ module.exports = {
     path: EXAMPLE
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.js', '.json', '.ts', '.jsx', '.tsx']
   },
   module: {
     rules : [
       {
-        test: /\.jsx?$/,
+        test: /\.ts(x?)$/,
+        loader: 'ts-loader'
+      },
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -27,19 +30,9 @@ module.exports = {
               ]
           }
         }
-      },
-      {
-        test: '/\.tsx?$/',
-        loader: 'awesome-typescript-loader'
       }
     ]
   },
-  resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
-  },
-  plugins: [
-    new CheckerPlugin()
-  ],
   watch: true,
   devtool: 'inline-source-map',
   devServer: {
