@@ -5,14 +5,14 @@ import { Star } from './star';
 import { StarBox } from './star.style';
 
 type IProps = {
-  repeat: any,
-  color: any,
-  activeColor: any,
-  activeStar: any
+  repeat: number,
+  color: string,
+  activeColor: string,
+  activeStar: string
 }
 
 type State = {
-  rating: any
+  rating: number
 };
 
 class StarRating extends React.Component<IProps, State> {
@@ -27,9 +27,9 @@ class StarRating extends React.Component<IProps, State> {
     rating: 0
   };
 
-  onClick = (rating: any) : void => this.setState({ rating })
+  onClick = (rating: number) : void => this.setState({ rating })
 
-  renderStar = (repeat: any) => [...new Array(repeat).fill(null)].map((item, rate) => 
+  renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
     <Star
       selected={this.state.rating > rate}
       onClick={() => this.onClick(rate + 1)}
