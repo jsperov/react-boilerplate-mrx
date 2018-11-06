@@ -11,9 +11,11 @@ const Star: React.SFC<Props> = ({
   selected,
   ...rest
 }) => 
-  <div
-    className={`star ${selected ? 'active' : ''}`}
-    {...rest}
-  />
+  <React.Fragment>
+    <div
+      className={`star ${selected ? 'active' : ''}`}
+      {...rest}
+    />
+  </React.Fragment>
 
 export { Star }
