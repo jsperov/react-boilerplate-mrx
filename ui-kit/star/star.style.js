@@ -2,23 +2,14 @@ import styled from 'styled-components';
 
 const StarBox = styled.div`
   .star {
-  display: inline-block;
-  margin: 0 7px;
-  width: 25px;
-  min-height: 25px;
-  background: ${props => props.color};
-  -webkit-clip-path: polygon(
-    0% 50%,
-    35% 35%,
-    50% 0%,
-    65% 35%,
-    100% 50%,
-    65% 65%,
-    50% 100%,
-    35% 65%
-  );
-  cursor: pointer;
-}
+    display: inline-block;
+    margin: 0 3px;
+    width: 25px;
+    min-height: 25px;
+    background: ${props => props.color};
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    cursor: pointer;
+  }
 
 .star.active {
   background: ${props => props.activeColor}};
