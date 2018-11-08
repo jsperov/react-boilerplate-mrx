@@ -1,31 +1,40 @@
 import * as React from 'react';
 
-
 import { Star } from './star';
 import { StarBox } from './star.style';
 
-type IProps = {
+import { COLORS } from './const';
+
+type Props = {
   repeat: number,
-  color: string,
-  activeColor: string,
-  activeStar: string
+  color?: string,
+  activeColor?: string,
+  activeStar?: string,
+  image?: string,
+  label?: string,
+  isLabel?: boolean
 }
 
 type State = {
   rating: number
 };
 
-class StarRating extends React.Component<IProps, State> {
+class StarRating extends React.Component<Props, State> {
   static defaultProps = {
     repeat: 5,
-    color: '#f9f',
-    activeColor: '#e7eb07',
-    activeStar: 0
+    color: COLORS.YELLOW,
+    activeColor: COLORS.ORANGE,
+    activeStar: 0,
+    isLabel: true
   }
 
   state = {
     rating: 0
   };
+
+  componentDidMount() {
+    //TODO: load rating service
+  }
 
   onClick = (rating: number) : void => this.setState({ rating })
 
@@ -39,7 +48,7 @@ class StarRating extends React.Component<IProps, State> {
   );
 
   render() {
-    const { repeat, color, activeColor } = this.props;
+    const { repeat, color, activeColor, isLabel } = this.props;
     const { rating } = this.state;
 
     return (
@@ -47,7 +56,7 @@ class StarRating extends React.Component<IProps, State> {
         color={color}
         activeColor={activeColor}
       >
-        Звезды {`${rating} из  ${repeat}`}
+        {isLabel && `Звезды ${rating} из ${repeat}`}
         {this.renderStar(repeat)}
       </StarBox>
     )
