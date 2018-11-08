@@ -3,7 +3,7 @@
     "outDir": "./example/",
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "ESNext",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "target": "es5",
@@ -12,9 +12,17 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "allowJs": true
+    "allowJs": true,
+    "allowUnreachableCode": true,
+    "diagnostics": true,
+    "experimentalDecorators": true,
+    "newLine": "LF",
+    "noErrorTruncation": true
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "ui-kit/**/*"
   ]
 }

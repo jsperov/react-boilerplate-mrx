@@ -5,7 +5,7 @@ const EXAMPLE = resolve(__dirname, 'example');
 
 module.exports = {
   mode: 'development',
-  entry: './ui-kit',
+  entry: './ui-kit/index.tsx',
   output: {
     filename: 'bundle.js',
     path: EXAMPLE
@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        loader: 'ts-loader'
+        loader: 'awesome-typescript-loader'
       },
       {
         test: /\.js$/,

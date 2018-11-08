@@ -7,9 +7,12 @@ import { COLORS } from './const';
 
 type Props = {
   repeat: number,
-  color: string,
-  activeColor: string,
-  activeStar: string
+  color?: string,
+  activeColor?: string,
+  activeStar?: string,
+  image?: string,
+  label?: string,
+  isLabel?: boolean
 }
 
 type State = {
@@ -21,7 +24,8 @@ class StarRating extends React.Component<Props, State> {
     repeat: 5,
     color: COLORS.YELLOW,
     activeColor: COLORS.ORANGE,
-    activeStar: 0
+    activeStar: 0,
+    isLabel: true
   }
 
   state = {
@@ -44,7 +48,7 @@ class StarRating extends React.Component<Props, State> {
   );
 
   render() {
-    const { repeat, color, activeColor } = this.props;
+    const { repeat, color, activeColor, isLabel } = this.props;
     const { rating } = this.state;
 
     return (
@@ -52,7 +56,7 @@ class StarRating extends React.Component<Props, State> {
         color={color}
         activeColor={activeColor}
       >
-        Звезды {`${rating} из  ${repeat}`}
+        {isLabel && `Звезды ${rating} из ${repeat}`}
         {this.renderStar(repeat)}
       </StarBox>
     )
