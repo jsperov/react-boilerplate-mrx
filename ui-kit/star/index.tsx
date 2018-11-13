@@ -21,7 +21,6 @@ type State = {
 
 class StarRating extends React.Component<Props, State> {
   static defaultProps = {
-    repeat: 5,
     color: COLORS.YELLOW,
     activeColor: COLORS.ORANGE,
     activeStar: 0,

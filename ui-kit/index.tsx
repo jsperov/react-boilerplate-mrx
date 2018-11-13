@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 import { StarRating } from './star/'
 
 ReactDOM.render(
-  <StarRating />,
+  <StarRating repeat={5}/>,
   document.getElementById('react-ui-kit'),
 );
 
