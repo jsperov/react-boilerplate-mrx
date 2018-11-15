@@ -4,7 +4,7 @@ import { StarRating } from '../star'
 
 class App extends React.Component {
   state = {
-    rating: 5
+    rating: 0
   }
 
   onClick = (rating: number) : void => this.setState({ rating })

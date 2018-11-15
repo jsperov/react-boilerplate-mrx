@@ -11,7 +11,7 @@ type Props = {
   onClick(rating: number): void,
   color?: string,
   activeColor?: string,
-  activeStar?: string,
+  activeStar?: number,
   image?: string,
   label?: string,
   isLabel?: boolean
@@ -22,7 +22,6 @@ const StarRating: React.StatelessComponent<Props> = ({
   onClick,
   color=COLORS.YELLOW,
   activeColor=COLORS.ORANGE,
-  activeStar=0,
   isLabel=true,
   rating
 }) => {
@@ -31,8 +30,6 @@ const StarRating: React.StatelessComponent<Props> = ({
     <Star
       selected={rating > rate}
       onClick={() => onClick(rate + 1)}
-      color={color}
-      activeColor={activeColor}
     />
   );
 
