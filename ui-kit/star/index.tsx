@@ -32,10 +32,6 @@ class StarRating extends React.Component<Props, State> {
     rating: 0
   };
 
-  componentDidMount() {
-    //TODO: load rating service
-  }
-
   onClick = (rating: number) : void => this.setState({ rating })
 
   renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
