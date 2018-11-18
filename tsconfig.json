@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./example/",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings/**/*.d.ts"
+    ],
     "noImplicitAny": true,
     "moduleResolution": "node",
     "module": "ESNext",

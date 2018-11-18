@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { StarRating } from './star/'
+import { App } from './testComponents/star'
 
 ReactDOM.render(
-  <StarRating />,
+  <App />,
   document.getElementById('react-ui-kit'),
 );
 
