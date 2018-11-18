@@ -11,9 +11,9 @@ const StarBox = styled.div`
     cursor: pointer;
   }
 
-.star.active {
-  background: ${props => props.activeColor}};
-}
+  .star.active {
+    background: ${props => props.activeColor};
+  }
 `
 
 export { StarBox }
