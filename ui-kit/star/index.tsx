@@ -13,6 +13,7 @@ type Props = {
   activeColor?: string,
   activeStar?: number,
   image?: string,
+  imageActive?: string,
   label?: string,
   isLabel?: boolean
 }
@@ -23,13 +24,17 @@ const StarRating: React.StatelessComponent<Props> = ({
   color=COLORS.YELLOW,
   activeColor=COLORS.ORANGE,
   isLabel=true,
-  rating
+  image=null,
+  rating,
+  imageActive,
+  ...rest
 }) => {
 
    const renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
     <Star
       selected={rating > rate}
       onClick={() => onClick(rate + 1)}
+      {...rest}
     />
   );
 
@@ -37,6 +42,8 @@ const StarRating: React.StatelessComponent<Props> = ({
     <StarBox
       color={color}
       activeColor={activeColor}
+      image={image}
+      imageActive={imageActive}
     >
       {isLabel && `Звезды ${rating} из ${repeat}`}
       {renderStar(repeat)}

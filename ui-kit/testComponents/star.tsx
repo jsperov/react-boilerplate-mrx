@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { StarRating } from '../star'
+import { StarRating } from '../star';
+
+import * as imageStar from './star.png';
 
 class App extends React.Component {
   state = {
@@ -17,6 +19,7 @@ class App extends React.Component {
         repeat={5}
         rating={rating}
         onClick={this.onClick}
+        image={imageStar}
       />
     ) 
   }
