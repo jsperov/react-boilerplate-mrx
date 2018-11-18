@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --progress",
-    "bundle": "webpack"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --progress",
+    "bundle": "cross-env NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,10 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.8.0",
+    "file-loader": "^2.0.0",
     "node-sass": "^4.9.4",
     "react-hot-loader": "^4.3.12",
     "sass-loader": "^7.1.0",
@@ -46,6 +48,7 @@
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.6",
+    "url-loader": "^1.1.2",
     "webpack": "^4.24.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"

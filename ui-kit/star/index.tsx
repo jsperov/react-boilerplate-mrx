@@ -7,60 +7,48 @@ import { COLORS } from './const';
 
 type Props = {
   repeat: number,
+  rating: number,
+  onClick(rating: number): void,
   color?: string,
   activeColor?: string,
-  activeStar?: string,
+  activeStar?: number,
   image?: string,
+  imageActive?: string,
   label?: string,
   isLabel?: boolean
 }
 
-type State = {
-  rating: number
-};
+const StarRating: React.StatelessComponent<Props> = ({
+  repeat,
+  onClick,
+  color=COLORS.YELLOW,
+  activeColor=COLORS.ORANGE,
+  isLabel=true,
+  image=null,
+  rating,
+  imageActive,
+  ...rest
+}) => {
 
-class StarRating extends React.Component<Props, State> {
-  static defaultProps = {
-    repeat: 5,
-    color: COLORS.YELLOW,
-    activeColor: COLORS.ORANGE,
-    activeStar: 0,
-    isLabel: true
-  }
-
-  state = {
-    rating: 0
-  };
-
-  componentDidMount() {
-    //TODO: load rating service
-  }
-
-  onClick = (rating: number) : void => this.setState({ rating })
-
-  renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
+   const renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
     <Star
-      selected={this.state.rating > rate}
-      onClick={() => this.onClick(rate + 1)}
-      color={this.props.color}
-      activeColor={this.props.activeColor}
+      selected={rating > rate}
+      onClick={() => onClick(rate + 1)}
+      {...rest}
     />
   );
 
-  render() {
-    const { repeat, color, activeColor, isLabel } = this.props;
-    const { rating } = this.state;
-
-    return (
-      <StarBox
-        color={color}
-        activeColor={activeColor}
-      >
-        {isLabel && `Звезды ${rating} из ${repeat}`}
-        {this.renderStar(repeat)}
-      </StarBox>
-    )
-  }
+  return (
+    <StarBox
+      color={color}
+      activeColor={activeColor}
+      image={image}
+      imageActive={imageActive}
+    >
+      {isLabel && `Звезды ${rating} из ${repeat}`}
+      {renderStar(repeat)}
+    </StarBox>
+  )
 }
 
 export { StarRating }
