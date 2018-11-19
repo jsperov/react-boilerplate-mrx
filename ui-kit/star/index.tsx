@@ -34,6 +34,7 @@ const StarRating: React.StatelessComponent<Props> = ({
     <Star
       selected={rating > rate}
       onClick={() => onClick(rate + 1)}
+      image={image}
       {...rest}
     />
   );
