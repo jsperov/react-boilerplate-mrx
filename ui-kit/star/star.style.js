@@ -4,10 +4,6 @@ const StarBox = styled.div`
   display: flex;
   align-items: center;
 
-  .label {
-    
-  }
-
   .star {
     display: inline-block;
     margin: 0 3px;
