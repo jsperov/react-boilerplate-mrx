@@ -32,6 +32,7 @@ const StarRating: React.StatelessComponent<Props> = ({
 
    const renderStar = (repeat: number) : JSX.Element[] => [...new Array(repeat).fill(null)].map((item, rate) => 
     <Star
+      key={`key-${rate}`}
       selected={rating > rate}
       onClick={() => onClick(rate + 1)}
       image={image}
