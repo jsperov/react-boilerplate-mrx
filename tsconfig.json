@@ -15,11 +15,11 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "skipDefaultLibCheck": true,
     "allowJs": true,
     "allowUnreachableCode": true,
     "diagnostics": true,
-    "experimentalDecorators": true,
     "newLine": "LF",
     "noErrorTruncation": true
   },

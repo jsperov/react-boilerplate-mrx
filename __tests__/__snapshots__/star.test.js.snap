@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarBox should render correctly 1`] = `
+<styled.div
+  activeColor="#e7ab07"
+  color="#e7eb07"
+  image={null}
+>
+  Звезды 1 из 5
+  <Star
+    image={null}
+    key="key-0"
+    onClick={[Function]}
+    selected={true}
+  />
+  <Star
+    image={null}
+    key="key-1"
+    onClick={[Function]}
+    selected={false}
+  />
+  <Star
+    image={null}
+    key="key-2"
+    onClick={[Function]}
+    selected={false}
+  />
+  <Star
+    image={null}
+    key="key-3"
+    onClick={[Function]}
+    selected={false}
+  />
+  <Star
+    image={null}
+    key="key-4"
+    onClick={[Function]}
+    selected={false}
+  />
+</styled.div>
+`;

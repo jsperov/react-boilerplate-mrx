@@ -3,6 +3,7 @@ const { resolve } = require('path');
 const SRC = resolve(__dirname, 'ui-kit');
 const EXAMPLE = resolve(__dirname, 'example');
 
+
 module.exports = {
   mode: 'development',
   entry: './ui-kit/index.tsx',
