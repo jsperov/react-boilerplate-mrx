@@ -6,10 +6,9 @@ module.exports = {
   },
   setupFiles: ["./__tests__/global.js"],
   modulePathIgnorePatterns: [
-    "./node_modules/",
+    "/node_modules/",
     "./example/",
-    "./__tests__/global.js",
-    "./enzyme.config.js"
+    "./__tests__/global.js"
   ],
   setupTestFrameworkScriptFile: "./enzyme.config.js"
 };
