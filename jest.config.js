@@ -8,7 +8,8 @@ module.exports = {
   modulePathIgnorePatterns: [
     "./node_modules/",
     "./example/",
-    "./__tests__/global.js"
+    "./__tests__/global.js",
+    "./enzyme.config.js"
   ],
   setupTestFrameworkScriptFile: "./enzyme.config.js"
 };
