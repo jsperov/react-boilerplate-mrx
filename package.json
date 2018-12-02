@@ -45,6 +45,7 @@
     "eslint": "^5.8.0",
     "file-loader": "^2.0.0",
     "jest": "^23.6.0",
+    "mocker-data-generator": "^2.6.6",
     "node-sass": "^4.9.4",
     "react-addons-test-utils": "^15.6.2",
     "react-hot-loader": "^4.3.12",
