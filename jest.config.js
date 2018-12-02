@@ -6,7 +6,7 @@ module.exports = {
   },
   setupFiles: ["./__tests__/global.js"],
   modulePathIgnorePatterns: [
-    "./node_modules/",
+    "/node_modules/",
     "./example/",
     "./__tests__/global.js"
   ],
