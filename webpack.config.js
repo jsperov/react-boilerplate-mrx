@@ -1,15 +1,15 @@
 const { resolve } = require('path');
 
 const SRC = resolve(__dirname, 'ui-kit');
-const EXAMPLE = resolve(__dirname, 'example');
+const DIST = resolve(__dirname, 'dist');
 
 
 module.exports = {
   mode: 'development',
-  entry: './ui-kit/index.tsx',
+  entry: './src/app.tsx',
   output: {
     filename: 'bundle.js',
-    path: EXAMPLE
+    path: DIST
   },
   resolve: {
     extensions: ['.js', '.json', '.ts', '.jsx', '.tsx']
@@ -49,7 +49,7 @@ module.exports = {
   watch: true,
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: EXAMPLE,
+    contentBase: DIST,
     clientLogLevel: 'error',
     stats: 'minimal'
   }

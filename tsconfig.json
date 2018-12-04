@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./example/",
+    "outDir": "./dist/",
     "typeRoots": [
       "./node_modules/@types",
       "./typings/**/*.d.ts"
@@ -27,6 +27,6 @@
     "node_modules"
   ],
   "include": [
-    "ui-kit/**/*"
+    "src/**/*"
   ]
 }
