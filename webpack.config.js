@@ -6,7 +6,7 @@ const DIST = resolve(__dirname, 'dist');
 
 module.exports = {
   mode: 'development',
-  entry: './src/app.tsx',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: DIST
@@ -49,6 +49,7 @@ module.exports = {
   watch: true,
   devtool: 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     contentBase: DIST,
     clientLogLevel: 'error',
     stats: 'minimal'
