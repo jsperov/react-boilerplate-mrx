@@ -1,3 +1,11 @@
 import * as React from 'react';
 
-export const Login = () : JSX.Element => <section className="login">Login Page</section>
+import { PageTemplate } from '../utils/page-template'
+
+export const Login = () : JSX.Element => (
+  <PageTemplate>
+    <section className="login">
+      Login Page
+    </section>
+  </PageTemplate>
+)
