@@ -1,3 +1,11 @@
 import * as React from 'react';
 
-export const Main = () : JSX.Element => <section className="main">Main page</section>
+import { PageTemplate } from '../utils/page-template'
+
+export const Main = () : JSX.Element => (
+  <PageTemplate>
+    <section className="main">
+      Main page
+    </section>
+  </PageTemplate> 
+)
