@@ -10,9 +10,10 @@
 
 ### Used
 
-- React
-- Typescript
-- Jest
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+- [Styled-components](https://www.styled-components.com/)
 
 ##### Author
 
