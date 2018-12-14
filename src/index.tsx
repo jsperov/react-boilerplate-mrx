@@ -3,7 +3,9 @@ import * as ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
-import { darkTheme } from './theme.style';
+
+import { GlobalStyledBox } from './global.style';
+import { darkTheme } from './theme/dark.style';
 
 import { App } from './route';
 
@@ -12,7 +14,9 @@ ReactDOM.render(
     <React.Fragment>
       <Normalize />
       <ThemeProvider theme={darkTheme}>
-        <App />
+        <GlobalStyledBox>
+          <App />
+        </GlobalStyledBox>
       </ThemeProvider>
     </React.Fragment>
   </Router>,
