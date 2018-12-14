@@ -8,10 +8,8 @@ import { MenuBox } from './menu.style';
 export const Menu:React.SFC = () => (
   <React.Fragment>
     <MenuBox>
-      <ul className="main-menu">
-        <NavLink className="main-menu__link" to={ROUTES.ROOT}>Главная</NavLink>
-        <NavLink className="main-menu__link" to={ROUTES.LOGIN}>Логин</NavLink>
-      </ul>
+      <NavLink className="main-menu__link" to={ROUTES.ROOT}>Главная</NavLink>
+      <NavLink className="main-menu__link" to={ROUTES.LOGIN}>Логин</NavLink>
     </MenuBox>
   </React.Fragment>
 )

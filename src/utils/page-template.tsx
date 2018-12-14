@@ -7,8 +7,10 @@ type Props = {
 }
 
 export const PageTemplate: React.SFC<Props> = ({ children }) => (
-  <section className="content">
+  <React.Fragment>
     <Menu />
-    {children}
-  </section>
+    <section className="content">
+      {children}
+    </section>
+  </React.Fragment>
 )
