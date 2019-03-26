@@ -7,7 +7,8 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --progress",
     "bundle": "cross-env NODE_ENV=production webpack",
     "test": "cross-env NODE_ENV=test jest --coverage --no-cache",
-    "dev": "next"
+    "dev": "node server.js",
+    "prod": "next build"
   },
   "repository": {
     "type": "git",
