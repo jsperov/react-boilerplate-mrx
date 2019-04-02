@@ -24,7 +24,8 @@
     "noErrorTruncation": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next"
   ],
   "include": [
     "src/**/*"

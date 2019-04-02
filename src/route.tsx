@@ -7,7 +7,7 @@ import { Error404 } from './pages/error404';
 
 import { ROUTES } from './consts/route'
 
-export const App = () => (
+export const Routes = () => (
   <Switch>
     <Route exact path={ROUTES.ROOT} component={Main} />
     <Route path={ROUTES.LOGIN} component={Login} />

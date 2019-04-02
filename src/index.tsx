@@ -7,7 +7,7 @@ import { Normalize } from 'styled-normalize';
 import { GlobalStyledBox } from './global.style';
 import { darkTheme } from './theme/dark.style';
 
-import { App } from './route';
+import { Routes } from './route';
 
 ReactDOM.render(
   <Router>
@@ -15,7 +15,7 @@ ReactDOM.render(
       <Normalize />
       <ThemeProvider theme={darkTheme}>
         <GlobalStyledBox>
-          <App />
+          <Routes />
         </GlobalStyledBox>
       </ThemeProvider>
     </React.Fragment>
