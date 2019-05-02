@@ -4,7 +4,7 @@
   "description": "my ui components",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --progress",
+    "start": "node server.js",
     "bundle": "cross-env NODE_ENV=production webpack",
     "test": "cross-env NODE_ENV=test jest --coverage --no-cache",
     "dev": "node server.js",

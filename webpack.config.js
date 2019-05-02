@@ -13,13 +13,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.json', '.ts', '.jsx', '.tsx'],
-    alias: Object.assign({}, config.resolve.alias, {
+    alias: {
       '@components': resolve(__dirname, './src/components'),
       '@consts': resolve(__dirname, './src/consts'),
       '@pages': resolve(__dirname, './src/pages'),
       '@services': resolve(__dirname, './src/services'),
       '@theme': resolve(__dirname, './src/theme'),
-    })
+    }
   },
   module: {
     rules : [
